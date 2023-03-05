@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNKRS</title>
+  <link rel="icon" href="./src/imagens/sneaker.png">
+  <link rel="stylesheet" href="/src/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/menu.css">
+  <link rel="stylesheet" href="src/css/slider.css">
+  <link rel="stylesheet" href="src/css/produtos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- INICIO DA BARRA DE NAVEGAÇÃO -->
+  <header class="header">
+    <nav class="menu">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./src/imagens/sneaker.png"  alt="Logo da skeaners">
+        </a>
+      </div>
+      
+      <input class="responsive" type="checkbox" id="menu-hamburguer"/>
+        <label for="menu-hamburguer">
+          <div class="button-hamburguer">
+            <span class="hamburguer"></span>
+          </div>
+        </label>
+      <div class="items">
+        <ul class="list-center">
+            <li class="list-item-center">
+              <a class="line" href="#">Lançamentos</a>
+              
+            </li>
+            <li class="list-item-center"><a class="line" href="#" >Masculino</a></li>
+            <li class="list-item-center"><a class="line" href="#">Feminino</a></li>
+            <li class="list-item-center">
+              <a id="marcas" class="line" href="">Marcas</a>
+              <ul class="drop">
+                <li><a href="">Nike</a></li>
+                <li><a href="">Adidas</a></li>
+                <li><a href="">ÖUS</a></li>
+                <li><a href="">Vans</a></li>
+              </ul></li>
+        </ul>
+
+      </div>
+      <div class="search">
+        <ul class="list-right">
+          <li class="list-item-right"><a href=""><i class="fa-solid fa-magnifying-glass search-icon"></i></a></li>
+          <li class="list-item-right"><a href=""><p class="nmbr">0</p><i class="fa-solid fa-cart-shopping cart"></a></i></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- FIM DA BARRA DE NAVEGAÇÃO -->
+
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="slider">
+      <div class="slides">
+        <input id="radio-1" name="radio-btn" type="radio" />
+        <input id="radio-2" name="radio-btn" type="radio" />
+        <input id="radio-3" name="radio-btn" type="radio" />
+        <input id="radio-4" name="radio-btn" type="radio" />
+        <div class="slide first">
+          <img src="./src/imagens/1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./src/imagens/2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./src/imagens/3.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./src/imagens/4.jpg" alt="" />
+        </div>
+      
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+      </div>
+      <div class="manual-navigation">
+        <label for="radio-1" class="manual-btn"></label>
+        <label for="radio-2" class="manual-btn"></label>
+        <label for="radio-3" class="manual-btn"></label>
+        <label for="radio-4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    </div>
+    <div class="produtos">
+      <div class="produto">
+        <div class="imagem">
+          <img src="./src/imagens/1.jpg" alt="">
+        </div>
+        <h1 class="nomeProduto">Air jordan 1 Zoom air CMFT</h1>
+        <h5 class="precoProduto">R$ 1000,00</h5>
+        <button class="adicionarProduto">Comprar</button>
+      </div>
+      <div class="produto">
+        <div class="imagem">
+          <img src="./src/imagens/2.jpg" alt="">
+        </div>
+        <h1 class="nomeProduto">Air jordan 1 marrom</h1>
+        <h5 class="precoProduto">R$ 1000,00</h5>
+        <button class="adicionarProduto">Comprar</button>
+      </div>
+      <div class="produto">
+        <div class="imagem">
+          <img src="./src/imagens/3.jpg" alt="">
+        </div>
+        <h1 class="nomeProduto">Air jordan 4</h1>
+        <h5 class="precoProduto">R$ 1000,00</h5>
+        <button class="adicionarProduto">Comprar</button>
+      </div>
+      <div class="produto">
+        <div class="imagem">
+          <img src="./src/imagens/4.jpg" alt="">
+        </div>
+        <h1 class="nomeProduto">Air jordan White</h1>
+        <h5 class="precoProduto">R$ 1000,00</h5>
+        <button class="adicionarProduto">Comprar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

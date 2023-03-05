@@ -1,0 +1,275 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.menu {
+  border-bottom: 3px solid black;
+  background-color: #6a6a6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu div {
+  margin: auto;
+}
+
+.header .menu .logo img {
+  padding-top: 10px;
+  animation: asa infinite ease-out 3s;
+  transition: 0.5s;
+  width: 150px;
+  text-align: left;
+}
+
+a:hover,
+select:hover {
+  color: #ffffff;
+  transition: 0.3s;
+}
+a,
+select {
+  transition: 0.5s;
+}
+.items .list-center .list-item-center .line:hover::after {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #050505;
+  transition: 0.7s;
+}
+
+.items ul {
+  display: flex;
+  flex-direction: row;
+}
+.list-item-center a:hover::after {
+  height: 400px;
+  width: 400px;
+}
+
+.list-center .list-item-center .line::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: #0c0c0c;
+}
+
+.menu .items .list-center .list-item-center {
+  margin: 10px;
+}
+.menu .items .list-center .list-item-center select {
+  border: none;
+  height: 20px;
+  cursor: pointer;
+}
+.menu .search .list-right {
+  display: flex;
+}
+
+.menu .search .list-right .list-item-right {
+  margin: 10px;
+  position: relative;
+}
+.menu .search .list-right .list-item-right input {
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 150px;
+  height: 30px;
+}
+
+.nmbr {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  color: rgb(3, 3, 3);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* MENU HAMBURGUER */
+
+.header .menu .button-hamburguer {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.header .menu .hamburguer {
+  background-color: #000;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: -10px;
+  transition: 0.5s ease-in-out;
+}
+
+.header .menu .hamburguer:before,
+.header .hamburguer::after {
+  background-color: #000;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+}
+
+.header .menu .hamburguer:before {
+  top: -10px;
+}
+
+.header .menu .hamburguer::after {
+  bottom: -10px;
+}
+
+.header .responsive,
+.header .menu .responsive label {
+  display: none;
+}
+
+.header .menu .responsive:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+.header .menu .responsive:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+.header .menu .responsive:checked ~ label .hamburguer::after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+/* FIM DO MENU HAMBURGUER */
+
+@media (max-width: 900px) {
+  .header .menu {
+    position: relative;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100vw;
+  }
+
+  .drop {
+    opacity: 0;
+  }
+
+  .items {
+    display: none;
+  }
+
+  .header .menu .items ul a {
+    margin: 20px;
+    padding: 0;
+  }
+  .header .menu .items {
+    margin-bottom: 90px;
+  }
+  .header .menu .button-hamburguer {
+    display: block;
+  }
+  .header .menu .items ul,
+  .header .menu .search {
+    display: none;
+  }
+
+  .menu .search .list-right .list-item-right input {
+    width: 300px;
+  }
+
+  .header .menu .responsive:checked ~ .items ul {
+    display: block;
+  }
+  .header .menu .responsive:checked ~ .items {
+    opacity: 1;
+    display: block;
+  }
+
+  .header .menu .responsive:checked ~ .search {
+    display: block;
+  }
+
+  .opacidade {
+    opacity: 1;
+  }
+
+  .header .button-hamburguer {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    z-index: 1;
+  }
+  .header .items ul {
+    width: 200px;
+    padding: 20px;
+  }
+  .header .items ul a {
+    text-align: center;
+    padding: 20px;
+    display: block;
+  }
+
+  .search ul {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+
+}
+
+
+@keyframes asa {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+/* DROPDOWN MENU */
+
+.drop li {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 9px;
+}
+.drop li a {
+  display: block;
+}
+ul.drop li {
+  display: block;
+}
+
+ul.drop li:not(:last-child) {
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+ul.drop {
+  width: 110px;
+  background-color: #6a6a6a;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  border: 2px solid black;
+}
+
+ul li:hover ul.drop {
+  display: block;
+}
